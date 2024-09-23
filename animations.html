@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 70vh;
+        width: 70vw;
+        border: 2px solid black;
+        background-color: aqua;
+        margin: auto;
+        margin-top: 20px;
+        position: relative;
+      }
+      .item {
+        height: 70px;
+        width: 98px;
+        border: 2px solid black;
+        background-color: brown;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* animation-name: meraPehlaAnimationHai;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 2s; 
+         animation-iteration-count: infinite;
+        animation-direction: alternate; */
+        animation: meraPehlaAnimationHai 3s ease-in-out infinite alternate,
+          meraDoosraAnimation 3s ease-in-out infinite alternate;
+      }
+      @keyframes meraPehlaAnimationHai {
+        0% {
+          top: 0;
+          left: 0;
+        }
+        25% {
+          top: 0;
+          left: 50%;
+        }
+        50% {
+          top: 50%;
+          left: 50%;
+        }
+        75% {
+          top: 50%;
+          left: 0;
+        }
+        100% {
+          top: 0;
+          left: 0;
+        }
+      }
+      @keyframes meraDoosraAnimation {
+        0% {
+          background-color: brown;
+          color: rgb(216, 205, 205);
+          font-weight: bolder;
+        }
+        25% {
+          background-color: blue;
+          color: white;
+          font-weight: bolder;
+        }
+        50% {
+          background-color: blueviolet;
+          color: white;
+          font-weight: bolder;
+        }
+        75% {
+          background-color: darkgray;
+          color: white;
+          font-weight: bolder;
+        }
+        100% {
+          background-color: yellow;
+          color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Item</div>
+    </div>
+  </body>
+</html>
