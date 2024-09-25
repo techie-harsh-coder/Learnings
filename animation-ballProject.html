@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 70vh;
+        width: 70vw;
+        border: 2px solid black;
+        background-color: aquamarine;
+        margin: auto;
+        margin-top: 20px;
+        position: relative;
+      }
+      .ball {
+        height: 70px;
+        width: 70px;
+        border: 1px solid black;
+        background-color: brown;
+        color: white;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 90%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation: animateX 10s linear infinite alternate,
+          animateY 2s linear infinite alternate;
+        /* animateY 2s linear infinite alternate; */
+      }
+      @keyframes animateX {
+        from {
+          left: 0;
+        }
+        to {
+          left: 100%;
+          transform: translate(-100%) rotate(1turn);
+        }
+      }
+      @keyframes animateY {
+        from {
+          bottom: 0;
+        }
+        to {
+          bottom: 100%;
+          transform: translate(-100%, 100%) rotate(1turn);
+          /* transform: translate(0, 100%) rotate(1turn); */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ball">Ball</div>
+    </div>
+  </body>
+</html>
