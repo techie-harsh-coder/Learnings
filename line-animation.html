@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: inline;
+        /* border: 1px solid black; */
+        position: relative;
+        padding-bottom: 10px;
+      }
+      div::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: brown;
+        height: 2px;
+        width: 0;
+        transition: width 0.5s ease;
+      }
+      div:hover::before {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Hover Me</div>
+  </body>
+</html>
