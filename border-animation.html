@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color-scheme: light dark;
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: bolder;
+        font-size: 40px;
+        font-style: normal;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+      .container {
+        width: 30vw;
+        height: 50vh;
+        background-color: rgb(27, 25, 25);
+        margin: auto;
+        /* margin-top: 30px; */
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+      }
+      .item {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        position: relative;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0px;
+        animation: mycontent 2s 2s infinite;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        height: 180%;
+        width: 50%;
+        background-color: white;
+        animation: name 2s 2s infinite;
+      }
+      @keyframes name {
+        100% {
+          transform: translate(-50%, -50%) rotate(225deg);
+        }
+      }
+      @keyframes mycontent {
+        0% {
+          font-size: 0px;
+        }
+        100% {
+          font-size: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">#Thug Life</div>
+    </div>
+  </body>
+</html>
