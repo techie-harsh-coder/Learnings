@@ -10,89 +10,81 @@
         padding: 0;
         box-sizing: border-box;
         color: white;
-        font-weight: bolder;
+        font-size: 24px;
+        font-weight: 900;
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .container {
-        display: flex;
-        flex-direction: column;
         width: 100vw;
         height: 100vh;
-        /* background-color: aqua; */
-        gap: 20px;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background-color: aqua;
       }
-      .header,
-      .footer {
-        width: 100vw;
-        height: 10vh;
-        background-color: aquamarine;
+      .headerFooter {
+        height: 10%;
+        width: 100%;
+
+        background-color: rgb(11, 63, 63);
       }
       .main {
+        height: 80%;
+        width: 100%;
         display: flex;
-        height: 80vh;
-        width: 100vw;
-        /* background-color: blueviolet; */
         gap: 10px;
       }
       .aside {
-        width: 30%;
         height: 100%;
-        background-color: cadetblue;
+        width: 30%;
+        background-color: green;
       }
       .section {
-        width: 70%;
         height: 100%;
-        background-color: coral;
-        display: flex;
-        align-items: flex-end;
-      }
-      .section-container {
-        height: 40%;
-        width: 100%;
-        /* background-color: crimson; */
+        width: 70%;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        justify-content: flex-end;
+        gap: 1px;
+        background-color: rgba(221, 147, 8, 0.829);
       }
-      .h1 {
-        width: 100%;
-        height: 20%;
+      .article {
+        height: 10%;
         text-align: center;
       }
-      .images {
-        width: 100%;
-        height: 80%;
+      .image-section {
+        height: 40%;
         display: flex;
-        /* justify-content: center; */
         gap: 10px;
-        /* background-color: antiquewhite; */
         padding: 10px;
       }
-      .image {
+      .img {
         height: 100%;
         width: 33.33%;
-        background-color: rgb(177, 146, 8);
-        /* border: 1px solid black; */
+        background-color: orange;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="header item1">Header</div>
-      <div class="main item2">
-        <div class="aside">Aside</div>
+      <div class="headerFooter flex">Header</div>
+      <div class="main">
+        <div class="aside flex">Aside</div>
         <div class="section">
-          <div class="section-container">
-            <div class="h1">Artice</div>
-            <div class="images">
-              <div class="image">image</div>
-              <div class="image">image</div>
-              <div class="image">image</div>
-            </div>
+          <div class="article">Article</div>
+          <div class="image-section">
+            <div class="img flex">Image</div>
+            <div class="img flex">Image</div>
+            <div class="img flex">Image</div>
           </div>
         </div>
       </div>
-      <div class="footer item3">Fotter</div>
+      <div class="headerFooter flex">Footer</div>
     </div>
   </body>
 </html>
